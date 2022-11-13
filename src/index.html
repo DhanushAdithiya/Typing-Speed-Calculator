@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h3 class="timer"></h3>
+      <ion-icon
+        name="contrast-outline"
+        class="theme-settings"
+        size="large"
+      ></ion-icon>
+    </div>
+
+    <!-- <form class="color-picker" action="">
+      <fieldset>
+        <legend class="visually-hidden">Pick a color scheme</legend>
+        <label for="light" class="visually-hidden">Light</label>
+        <input type="radio" name="theme" id="light" checked />
+
+        <label for="pink" class="visually-hidden">Dark</label>
+        <input type="radio" id="dark" name="theme" />
+
+        <label for="blue" class="visually-hidden">Monokai</label>
+        <input type="radio" id="monokai" name="theme" />
+
+        <label for="green" class="visually-hidden">Iceberg</label>
+        <input type="radio" id="iceberg" name="theme" />
+
+        <label for="dark" class="visually-hidden">Nord</label>
+        <input type="radio" id="nord" name="theme" />
+      </fieldset>
+    </form> -->
+    <div class="theme-picker hidden">
+      <form class="color-picker" action="">
+        <fieldset>
+          <div class="all-theme">
+            <div class="ind-theme">
+              <label for="light" class="visually-hidden">Light</label>
+              <input type="radio" name="theme" id="light" checked />
+            </div>
+            <br />
+            <div class="ind-theme">
+              <label for="dark" class="visually-hidden">Dark theme</label>
+              <input type="radio" id="dark" name="theme" />
+            </div>
+            <br />
+            <!-- <div class="ind-theme">
+              <label for="pink" class="visually-hidden">Iceberg</label>
+              <input type="radio" id="pink" name="theme" />
+            </div>
+            <br />
+            <div class="ind-theme">
+              <label for="blue" class="visually-hidden">Monokai theme</label>
+              <input type="radio" id="blue" name="theme" />
+            </div>
+            <br />
+            <div class="ind-theme">
+              <label for="green" class="visually-hidden">Nord theme</label>
+              <input type="radio" id="green" name="theme" />
+            </div> -->
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <h2 class="text"></h2>
+    <div class="typing-area">
+      <h3 class="WPM"></h3>
+
+      <input type="text" placeholder="" name="inputf" class="input-txt" />
+      <input type="button" value="RESET" class="btn-reset" />
+    </div>
+    <script src="render.js" defer></script>
+    <script src="dataset/quotes.json"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

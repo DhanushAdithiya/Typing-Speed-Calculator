@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --main-font: rgb(0, 0, 0);
+  --secondary-font: rgb(0, 0, 0);
+  --btn-reset: #3ab0ff;
+  --timer-bg: #ffb562;
+  --bg-color: hsl(0, 0%, 100%);
+  --underline-clr: #f87474;
+  --mistake-color: #fe5f55;
+  --img-col: black;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 38rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  /* background-color: var(--main-color); */
+}
+
+.main-title,
+.text {
+  text-align: center;
+}
+
+.text {
+  margin: 3em 0;
+  color: var(--main-font);
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.mistake {
+  background-color: var(--mistake-color);
+}
+
+.typing-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  gap: 1em;
+}
+
+.btn-reset {
+  width: 20%;
+  height: 3em;
+  background-color: var(--btn-reset);
+  border-radius: 2em;
+  border: 0;
+  font-weight: bold;
+}
+
+.btn-reset:hover {
+  background-color: skyblue;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.input-txt {
+  width: 70%;
+  height: 3em;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid var(--underline-clr);
+  background-color: var(--bg-color);
+  font-size: 1.5em;
+  color: var(--main-font);
+}
+
+.input-txt:focus {
+  border-bottom: 2px solid var(--underline-hvr);
+  transition: 0.5s;
+}
+
+.timer {
+  background-color: var(--timer-bg);
+  width: 1.5em;
+  height: 1.5em;
+  border: 5px solid var(--timer-bg);
+  border-radius: 50%;
+  /* padding: 0.2em; */
+  margin: 0 0;
+  text-align: center;
+}
+
+.WPM {
+  color: var(--secondary-font);
+}
+
+.nav {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.theme-settings {
+  color: var(--img-col);
+}
+
+.nav img:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  width: 30%;
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  margin: 0em 2em;
+  background-color: lightcoral;
+  outline: 0;
+  border: 0;
+  height: 5.5em;
+  border-radius: 1em;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+legend {
+  background-color: white;
+}
+
+.all-theme {
+  padding: 0.5em 0em;
+}
+
+.ind-theme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#light {
+  --radio-color: white;
+}
+.color-picker input[type="radio"]#pink {
+  --radio-color: pink;
+}
+.color-picker input[type="radio"]#blue {
+  --radio-color: lightyellow;
+}
+.color-picker input[type="radio"]#green {
+  --radio-color: skyblue;
+}
+.color-picker input[type="radio"]#dark {
+  --radio-color: #232323;
+}
+
+:root:has(#light:checked) {
+  --main-font: rgb(0, 0, 0);
+  --secondary-font: rgb(0, 0, 0);
+  --btn-reset: #3ab0ff;
+  --timer-bg: #ffb562;
+  --bg-color: hsl(0, 0%, 100%);
+  --underline-clr: #f87474;
+  --img-col: black;
+}
+
+:root:has(#dark:checked) {
+  --main-font: #eff1f3;
+  --secondary-font: white;
+  --btn-reset: #009ffd;
+  --timer-bg: #fed766;
+  --bg-color: #272727;
+  --underline-clr: #bdd5ea;
+  --underline-hvr: white;
+  --img-col: white;
+}
+
+.hidden {
+  display: none;
+}
